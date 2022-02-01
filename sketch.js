@@ -23,13 +23,13 @@ function setup(){
   
   createCanvas(windowWidth,windowHeight);
 // Moving background
-path=createSprite(windowWidth-600,200);
+path=createSprite(windowWidth-60,200);
 path.addImage(pathImg);
 path.velocityY = 4;
 
 
 //creating boy running
-boy = createSprite(windowWidth-300,580,20,20);
+boy = createSprite(70,580,20,20);
 boy.addAnimation("SahilRunning",boyImg);
 boy.scale=0.08;
   
@@ -120,44 +120,44 @@ function draw() {
 
 function createCash() {
   if (World.frameCount % 200 == 0) {
-  var cash = createSprite(Math.round(random(150, 700),40, 10, 10));
+  var cash = createSprite(Math.round(random(50, windowWidth),40, 10, 10));
   cash.addImage(cashImg);
   cash.scale=0.12;
-  cash.velocityY = 4;
-  cash.lifetime = 200;
+  cash.velocityY = 3;
+  cash.lifetime = 150;
   cashG.add(cash);
   }
 }
 
 function createDiamonds() {
   if (World.frameCount % 320 == 0) {
-  var diamonds = createSprite(Math.round(random(100, 700),40, 10, 10));
+  var diamonds = createSprite(Math.round(random(50, windowWidth),40, 10, 10));
   diamonds.addImage(diamondsImg);
   diamonds.scale=0.03;
-  diamonds.velocityY = 4;
-  diamonds.lifetime = 200;
+  diamonds.velocityY = 3;
+  diamonds.lifetime = 150;
   diamondsG.add(diamonds);
 }
 }
 
 function createjewelry() {
   if (World.frameCount % 410 == 0) {
-  var jewelry = createSprite(Math.round(random(150, 700),40, 10, 10));
+  var jewelry = createSprite(Math.round(random(50, windowWidth),40, 10, 10));
   jewelry.addImage(jewelryImg);
   jewelry.scale=0.13;
-  jewelry.velocityY = 4;
-  jewelry.lifetime = 200;
+  jewelry.velocityY = 3;
+  jewelry.lifetime = 150;
   jewelryG.add(jewelry);
   }
 }
 
 function createSword(){
   if (World.frameCount % 530 == 0) {
-  var sword = createSprite(Math.round(random(100, 700),40, 10, 10));
+  var sword = createSprite(Math.round(random(50, windowWidth),40, 10, 10));
   sword.addImage(swordImg);
   sword.scale=0.1;
-  sword.velocityY = 4;
-  sword.lifetime = 200;
+  sword.velocityY = 3;
+  sword.lifetime = 150;
   swordGroup.add(sword);
   }
 }
